@@ -25,3 +25,24 @@ No installation required - just Python 3.6+
 
 Perfect for security teams, IT professionals, and incident responders who need to safely transfer malware samples for analysis.
 
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Combine Tar Chunks
+
+  Scripts to reassemble chunked tar.gz files (e.g., from split) back into a single file.
+  ┌────────────────────    ┬────────────    ┐
+  │       Script           │  Language      │
+  ├───────────────────-----┼───────────    ─┤
+  │ combine_tar_chunks.py  │   Python       │
+  ├────────────────────┼────────────        ┤
+  │ Combine_tar_Chunks.ps1 │ PowerShell     │
+  └────────────────────    ┴────────────    ┘
+  Features:
+  - Auto-detects chunk naming patterns (.001, .aa, .part1, .chunk1)
+  - Auto-derives output filename from chunk name
+  - Buffered I/O (8 MB default) for large files
+  - Outputs MD5 and SHA256 hashes of the combined file
+  - Progress reporting
+
+  Usage:
+  python combine_chunks.py backup.tar.gz.001
+  .\Combine-Chunks.ps1 -InputFile "backup.tar.gz.001"
